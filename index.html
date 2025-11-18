@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weeknd Discography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <a href="#content" class="skip-link">Skip to main content</a>
+    <a href="#sidebar" class="skip-link">Skip to album selection</a>
+
+    <nav id="navigation" aria-label="Main navigation">
+        <a href="index.html">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>About</span>
+        </a>
+    </nav>
+
+
+    <div id="layout">
+
+        <aside id="sidebar" aria-label="Album Selection">
+            <h2>Albums</h2>
+            <button onclick="changeAlbum('dawnfm')">Dawn FM</button>
+            <button onclick="changeAlbum('starboy')">Starboy</button>
+            <button onclick="changeAlbum('kissland')">Kiss Land</button>
+            <button onclick="changeAlbum('trilogy')">Trilogy</button>
+        </aside>
+
+        <main id="content">
+            <section id="album-content" style="display:none;">
+                <h2 id="album-title"></h2>
+                <p id="album-description"></p>
+
+                <iframe id="spotify-embed"
+                        width="300"
+                        height="380"
+                        title="Spotify album player">
+                </iframe>
+            </section>
+
+            <section id="home-albumtitle-section">
+                <h1>The Weeknd - Select an Album to Change Theme!</h1>
+                <img id="main-image" src = "images/theweeknd.jpg" alt="Album cover image for selected album">
+                <p>
+                    The Weeknd, born Abel Tesfaye, is a Canadian singer, songwriter, and producer.
+                    He is known for his atmospheric sound, emotional intensity, and genre-blending style.<br><br>
+
+                    Rising from his early 2011 mixtapes <em>House of Balloons</em>, <em>Thursday</em>, and 
+                    <em>Echoes of Silence</em>, he quickly became one of the most influential artists in modern R&B and pop.
+                    <br><br>
+
+                    His breakout albums <em>Kiss Land</em> (2013), <em>Beauty Behind the Madness</em> (2015), and 
+                    <em>Starboy</em> (2016) earned global success.<br><br>
+
+                    Since then, he has released acclaimed projects like <em>After Hours</em> (2020) and 
+                    <em>Dawn FM</em> (2022), each known for cinematic storytelling and chart-topping singles.
+                </p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>The Weeknd Album Project</p>
+        <p>Designed for SI339 Final Project</p>
+        <a href="#top">Back to top</a>
+    </footer>
+    <script src = "js/albums.js"></script>
+</body>
+</html>
