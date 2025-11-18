@@ -13,3 +13,44 @@
 .skip-link:focus {
     left: 10px;
 }
+
+body.home-theme {
+    background-color: #111;
+    color: #ffffff;
+}
+
+body.theme-dawnfm {
+    background-color: #0a0f2d;
+    color: #d9e4ff;
+}
+
+body.theme-dawnfm #album-content h2 {
+    color: #7aa2ff;
+}
+
+body.theme-starboy {
+    background-color: #7a0000;
+    color: #ffeb9c;
+}
+
+body.theme-starboy #album-content h2 {
+    color: #ffdd33;
+}
+
+body.theme-kissland {
+    background-color: #000000;
+    color: #c5ffd9;
+}
+
+body.theme-kissland #album-content h2 {
+    color: #23ff8c;
+}
+
+body.theme-trilogy {
+    background-color: #000000;
+    color: #e6e6e6;
+}
+
+body.theme-trilogy #album-content h2 {
+    color: #ffffff;
+}
