@@ -6,6 +6,7 @@
     <title>The Weeknd Discography</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -25,7 +26,7 @@
             <span>About</span>
         </a>
     </nav>
-
+    <main id="content">
     <h1>The Weeknd - Select an Album to Change Theme!</h1>
 
     <div id="layout">
@@ -38,12 +39,13 @@
             <button onclick="changeAlbum('trilogy')">Trilogy</button>
         </aside>
 
-        <main id="content">
-            <section id="album-content" style="display:none;">
-                <h2 id="album-title"></h2>
+            <section id="album-content">
+                <h2 id="album-title" style="display:none;">Title will appear here once an album is selected.</h2>
                 <img id="album-cover" src="" alt="">
-                <h3>Album Descrption:</h3>
-                <p id="album-description"></p>
+                <div>
+                    <h3 id="album-heading" style="display:none;">Album Description:</h3>
+                    <p id="album-description"></p>
+                </div>
 
                 <iframe 
                     id="spotify-embed"
@@ -75,11 +77,11 @@
                 </p>
             </section>
 
-        </main>
+    </main>
     </div>
 
     <footer class="site-footer">
-        <p>The Weeknd Album Project</p>
+        <p>The Weeknd Album Project - Niamh Duffy</p>
         <p>Designed for SI339 Final Project</p>
         <a href="#top">Back to top</a>
     </footer>

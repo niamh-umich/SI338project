@@ -1,7 +1,7 @@
 const albums = {
     dawnfm: {
         title: "You Have Selected Dawn FM",
-        description: "“Dawn FM” is a concept album framed as a surreal radio broadcast guiding listeners through a liminal, purgatory-like state. It blends synth-pop, disco, and electronic influences to explore themes of reflection, regret, and spiritual transition.",
+        description: "“Dawn FM” is a concept album framed as a surreal radio broadcast guiding listeners through a liminal, purgatory state. It blends synth-pop, disco, and electronic influences to explore themes of reflection, regret, and spiritual transition.",
         cover: "images/dawnfm.jpg",
         alt: "Dawn FM album cover",
         spotify: "https://open.spotify.com/embed/album/2nLOHgzXzwFEpl62zAgCEC?utm_source=generator&theme=0",
@@ -36,9 +36,20 @@ const albums = {
 function changeAlbum(key) {
     const album = albums[key];
 
-    // hide home content, show  album content
+    // hide the home section
     document.querySelector("#home-albumtitle-section").style.display = "none";
-    document.querySelector("#album-content").style.display = "block";
+
+    // show the album section and expand its height
+    const albumSection = document.querySelector("#album-content");
+    albumSection.style.display = "block";
+    albumSection.style.visibility = "visible";
+    albumSection.style.height = "auto";
+    albumSection.style.overflow = "visible";
+
+    // show the heading
+    document.querySelector("#album-heading").style.display = "block";
+    document.querySelector("#album-title").style.display = "block";
+
 
     // update title + description
     document.querySelector("#album-title").textContent = album.title;
@@ -49,11 +60,12 @@ function changeAlbum(key) {
     image.src = album.cover;
     image.alt = album.alt;
 
-    // spotify embed
+    // update spotify embed
     document.querySelector("#spotify-embed").src = album.spotify;
 
-    // css
-    document.body.className = "";       // clear previous theme
+    // theme
+    document.body.className = "";
     document.body.classList.add(album.theme);
 }
+
 
